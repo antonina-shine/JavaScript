@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First</title>
+    <script>
+        
+        'use strict';
+
+//Первое задание
+    
+    //пример 1
+        
+//    let a = 1, b = 1, c, d;
+//    c = ++a;
+//    alert(c); //ответ: 2
+    //Инкремент прибавит единицу к переменной а, в нее теперь запишется число 2. Затем число 2 из переменной а присваивается переменной с.
+        
+    //пример 2
+        
+//    d = b++;
+//    alert(d); //ответ: 1
+    //Перемнной d присваивается значение перемнной b, которое равно 1. Затем значение переменной b увеличивается на единицу, и становится числом 2.
+        
+    //пример 3
+        
+//    c = 2 + ++a;
+//    alert(c); //ответ: 5
+    //Значение переменной а увеличивается на единицу и становится 3. Далее 3 складывается с 2, получившиеся значение 5 присваивается переменной с.
+        
+    //пример 4 
+        
+//    d = 2 + b++;
+//    alert(d); //ответ: 4
+    //Переменной d присваивается результат сложения числа 2 и значения переменной 2, который равен 4. После этого значение переменной b увеличивается на единицу.
+        
+//    alert(a); //3 
+//    alert(b); //3
+    
+//Второе задание
+        
+//    let a = 2;
+//    let x = 1 + (a *= 2);
+    //В скобках находим произведение значения переменной а, 2 на число 2. Полученное значение - 4 - присваиваем переменной а. Выходим из скобок, 4 прибавлем к числу 1. Полученное значение - 5 - присваиваем переменной x.
+        
+//Третье задание
+        
+//    let a = prompt("Введите первое число для математической операции: ");
+//    let b = prompt("Введите второе число для математической операции: ");
+    
+    if (isNaN(a || b)) {
+            throw new Error("Введено не корректно оба или одно из значений");
+        }
+        
+    if (a>=0 && b>=0) {
+        console.log(a-b);
+    }
+        else if (a<0 && b<0) {
+            console.log(a*b);
+        }
+            else {
+                console.log(a+b);
+            }
+        
+//Четвертое задание 
+            
+    /**
+    * Функция производит сложение двух чисел.
+    */
+    function makeAddition () {
+        let pars1 = Number(prompt("Введите первое положительное число для сложения: "));
+        let pars2 = Number(prompt("Введите второе положительное число для сложения: "));
+        
+        if (pars1 && pars2 > 0){
+            console.log(pars1 + pars2);
+            return;
+        }
+        
+        else if (pars1 || pars2 === 0) {
+            throw new Error("Что-то пошло не так");
+            
+        }
+        else if (isNaN(pars1 || pars2)) {
+            throw new Error("Введено не корректно оба или одно из значений");
+        }
+    }
+        
+//    console.log(makeAddition());
+        
+    /**
+    * Функция находит разность двух чисел.
+    */
+    function makeSubtraction () {
+        let parr1 = Number(prompt("Введите уменьшаемое число: "));
+        let parr2 = Number(prompt("Введите вычитаемое число: "));
+        
+        if (parr1 && parr2 > 0){
+            console.log(parr1 - parr2);
+            return;
+        }
+        
+        else if (parr1 || parr2 === 0) {
+            throw new Error("Что-то пошло не так");
+            
+        }
+        else if (isNaN(parr1 || parr2)) {
+            throw new Error("Введено не корректно оба или одно из значений");
+        }
+    }
+        
+//    console.log(makeSubtraction());
+        
+    /**
+    * Функция находит произведение двух чисел.
+    */
+    function makeMultiplication () {
+        let parp1 = Number(prompt("Введите первый множитель: "));
+        let parp2 = Number(prompt("Введите второй множитель: "));
+        
+        if (parp1 && parp2 > 0){
+            console.log(parp1 * parp2);
+            return;
+        }
+        
+        else if (parp1 || parp2 === 0) {
+            throw new Error("Что-то пошло не так");
+            
+        }
+        else if (isNaN(parp1 || parp2)) {
+            throw new Error("Введено не корректно оба или одно из значений");
+        }
+    }
+        
+//    console.log(makeMultiplication());
+        
+    /**
+    * Функция находит частное двух чисел.
+    */
+    function makeDivision () {
+        let pard1 = Number(prompt("Введите делимое: "));
+        let pard2 = Number(prompt("Введите делитель: "));
+        
+        if (pard1 && pard2 > 0){
+            console.log(pard1 / pard2);
+            return;
+        }
+        
+        else if (pard1 || pard2 === 0) {
+            throw new Error("Что-то пошло не так");
+            
+        }
+        else if (isNaN(pard1 || pard2)) {
+            throw new Error("Введено не корректно оба или одно из значений");
+        }
+    }
+        
+//    console.log(makeDivision());
+        
+//Пятое задание
+        
+    function mathOperation() {
+        let operation = prompt("Какую математическую операцию хотите выполнить с числами?: ");
+        switch(operation) {
+               case "сложение":
+                    makeAddition();
+                    break;
+               case "вычитание": 
+                    makeSubtraction();
+                    break;
+               case "умножение": 
+                    makeMultiplication();
+                    break;
+               case "деление": 
+                    makeDivision();
+                    break;
+               default:
+                    alert("Что-то не понятное")
+        }
+    }
+        
+//    mathOperation();
+        
+//Шестое задание
+        
+//        let num = String(prompt("Введите Ваше любимое число: "));
+        let str = num.slice(-1);
+        console.log(str);
+        switch(str) {
+               case "1":
+                    alert("Ваша сумма в " + num + " рубль успешно зачислена");
+                    break;
+               case "2":
+               case "3":
+               case "4":
+                    alert("Ваша сумма в " + num + " рубля успешно зачислена");
+                    break;
+               case "0":
+               case "5": 
+               case "6":
+               case "7":
+               case "8":
+               case "9":
+                    alert("Ваша сумма в " + num + " рублей успешно зачислена");
+                    break;
+               default:
+                    alert("Что-то не понятное")
+        }
+        
+    </script>
+        
